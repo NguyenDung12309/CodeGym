@@ -1,0 +1,6 @@
+<div id="container" [ngStyle]="{backgroundColor: color}">
+  <input type="button" #red [ngStyle]="{backgroundColor: 'red'}" value="red" (click)="changeColor(red.value)">
+  <input type="button" #blue [ngStyle]="{backgroundColor: 'blue'}" value="blue" (click)="changeColor(blue.value)">
+  <input type="button" #yellow [ngStyle]="{backgroundColor: 'yellow'}" value="yellow" (click)="changeColor(yellow.value)">
+  <input type="button" #white [ngStyle]="{backgroundColor: 'white'}" value="white" (click)="changeColor(white.value)">
+</div>
