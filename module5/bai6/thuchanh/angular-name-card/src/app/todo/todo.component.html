@@ -1,0 +1,6 @@
+<input type="text" class="form-control" [formControl]="content" (change)="change()">
+<ul>
+  <li *ngFor="let todo of todos; index as i" (click)="toggleTodo(i)" [class.complete]="todo.complete"> 
+    {{todo.content}}
+  </li>
+</ul>

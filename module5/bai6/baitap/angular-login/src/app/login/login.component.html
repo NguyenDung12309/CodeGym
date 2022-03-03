@@ -1,0 +1,22 @@
+<p>Reactive Form!</p>
+<div class="card border-success mt-4">
+  <h3 class="card-header bg-success">Child Component</h3>
+  <div class="card-body">
+    <h4 class="card-title">Login Form</h4>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Email: </label>
+        <input type="text" class="form-group" formControlName="email">
+        <span *ngIf="loginForm.controls.email.dirty && loginForm.controls.email?.invalid" style="color: red">Require Input</span>
+      </div>
+      <div class="form-group">
+        <label>Password: </label>
+        <input type="text" class="form-group" formControlName="password">
+        <span *ngIf="loginForm.controls.email.dirty
+      && loginForm.controls.password?.invalid" style="color: red">Require Input</span>
+
+      </div>
+  <button type="submit" class="btn bg-primary" [disabled]="loginForm.invalid">Submit</button>
+  </form>
+</div>
+</div>
